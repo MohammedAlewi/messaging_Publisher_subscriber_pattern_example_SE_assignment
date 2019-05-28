@@ -16,7 +16,6 @@ class Sender:
 
     def publish_message(self):
         self.brocker.add_message(self.queneingMessages.pop())
-        self.brocker.add_message(self.currentMessage)
         self.messagesSent.append(self.currentMessage)
 
     def clearMessage(self):

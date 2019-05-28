@@ -22,3 +22,10 @@ class Brocker:
         for  message  in self.senders_message:
             if(message.senderName==reciver.subscribe_to):
                 reciver.recivedMessages.append(message)
+    
+    def check_new_message_using_name(self,subscribe_to):
+        rec=[]
+        for  message  in self.senders_message:
+            if(message.senderName==subscribe_to):
+                rec.append(message)
+        return rec
